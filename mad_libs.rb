@@ -20,6 +20,7 @@ class MadLibs
 
 
   # Constants:
+  #  PLACEHOLDER_REGEX is a Regex that finds placeholders of the form ((...)) #FIXME: Incorporate finding inner parentheses
   PLACEHOLDER_REGEX = /\(\([-:'\s\w]+\)\)/ #Regex that finds placeholders of the form ((...)) #FIXME: Incorporate finding inner parentheses
 
 
