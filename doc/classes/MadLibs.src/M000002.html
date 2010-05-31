@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>parse (MadLibs)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File mad_libs.rb, line 47</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">story</span>)
+    <span class="ruby-ivar">@mappings</span> <span class="ruby-operator">||=</span> {}
+
+    <span class="ruby-identifier">placeholders</span> = <span class="ruby-identifier">story</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-constant">PLACEHOLDER_REGEX</span>).<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">placeholder</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">extract_categories</span>(<span class="ruby-identifier">placeholder</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">category</span><span class="ruby-operator">|</span>
+        <span class="ruby-comment cmt"># puts placeholder + &quot;: '&quot;+ category + &quot;'&quot; #Debugging</span>
+        <span class="ruby-identifier">set_mapping</span>(<span class="ruby-identifier">category</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">parsed_story</span> = <span class="ruby-identifier">story</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">PLACEHOLDER_REGEX</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">placeholder</span><span class="ruby-operator">|</span> <span class="ruby-identifier">replace_placeholder</span>(<span class="ruby-identifier">placeholder</span>)}
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
