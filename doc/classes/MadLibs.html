@@ -211,9 +211,10 @@ href="MadLibs.html#M000001">new</a> categories, ask the user for the answer
 and save the mapping return the answer to the first category.
 </p>
 <p>
-Specifically: For each placeholder, /\(\([-:&#8217;\s\w]+\)\)/,
+Specifically:
 </p>
 <pre>
+ For each placeholder, /\(\([-:'\s\w]+\)\)/,
  split by colon and for each colon-separated category:
  Map the category to a name
 </pre>

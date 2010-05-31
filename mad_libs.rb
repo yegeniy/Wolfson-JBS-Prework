@@ -40,7 +40,8 @@ class MadLibs
   # For all new categories, ask the user for the answer and save the mapping
   # return the answer to the first category.
   #  
-  # Specifically: For each placeholder, /\(\([-:'\s\w]+\)\)/,
+  # Specifically: 
+  #  For each placeholder, /\(\([-:'\s\w]+\)\)/,
   #  split by colon and for each colon-separated category:
   #  Map the category to a name
   # Then, swap placeholders for the first name associated with the placeholder
