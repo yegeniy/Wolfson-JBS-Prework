@@ -1,6 +1,6 @@
 #####
 #
-# Mad Libs Game
+# Mad Libs Game, Prework
 # Ask the user for a series of words to replace categories; fill in proper places in the story using the user's answers.
 # by Eugene Wolfson
 # Just needs ruby to run
@@ -30,7 +30,7 @@ class MadLibs
   # fill in proper places in the story using the user's answers.
   # Then Print the parsed story
   def initialize(filepath)
-    puts "Give an appropriate response to each category. Note that parenthesis "
+    puts "Give an appropriate response to each category. Note that parenthesis within placeholders are NOT supported."
     story = File::read(filepath) #FIXME: Do I want to be putting the whole file into story? What if it's long?
     print parse(story)
   end
