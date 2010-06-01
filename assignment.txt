@@ -1,3 +1,5 @@
+See Screencast at http://www.screencast-o-matic.com/watch/c61VnciFY
+
 Assignment for Madlibs:
 
 ask the user for a series of words; fill in proper places in the story using the user's answers.
